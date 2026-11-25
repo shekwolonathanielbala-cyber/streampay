@@ -180,6 +180,18 @@ function canonicalEvent(event: StreamPayEvent): Canonical {
           new_deposit: event.newDeposit.toString(),
         },
       };
+    case "StreamPaused":
+      return {
+        ...base,
+        topics: { stream_id: event.streamId.toString() },
+        data: { paused_at: event.pausedAt.toString() },
+      };
+    case "StreamResumed":
+      return {
+        ...base,
+        topics: { stream_id: event.streamId.toString() },
+        data: { new_end_time: event.newEndTime.toString() },
+      };
     case "StreamScheduled":
       return {
         ...base,
