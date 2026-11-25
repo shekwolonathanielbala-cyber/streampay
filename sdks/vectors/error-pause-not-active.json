@@ -1,0 +1,30 @@
+{
+  "schema": "streampay-vector/v1",
+  "name": "error-pause-not-active",
+  "specFingerprint": "b0beb370c97a250f8fe97c8bbd4bd65247b35dc7145e8c41e1e0b40a826fe276",
+  "provenance": "pause_stream against a stream that is not Active (e.g. cancelled); set_paused checks status first and rejects with StreamNotActive. The result is ScVal::Error(SCError::Contract(code)) with the code from frontend/lib/errors.ts.",
+  "transactionEnvelopeXdr": "AAAAAgAAAADqSmxj4pxSCr71UHsTLsX5lUd2rr6+e5JCHuppFEbSLAABhqAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAGAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAMcGF1c2Vfc3RyZWFtAAAAAgAAABIAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAAEAAAAAAAAAAAAAAAEURtIsAAAAQKVXa0YkWVKh6EqqCv37dv3ydudPS26VPeDg7Q6nPyjppIIlQLmZObkzZHLdJxTTcmNqLBMcURysjYRu5ftNBgU=",
+  "resultXdr": "AAAAAgAAAAAAAAAF",
+  "eventsXdr": [],
+  "expected": {
+    "transaction": {
+      "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4",
+      "function": "pause_stream",
+      "args": {
+        "caller": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+        "stream_id": "1"
+      },
+      "source": "GDVEU3DD4KOFECV66VIHWEZOYX4ZKR3WV27L464SIIPOU2IUI3JCZA57",
+      "fee": "100000",
+      "sequence": "1",
+      "signatures": 1
+    },
+    "result": {
+      "error": {
+        "name": "StreamNotActive",
+        "code": 5
+      }
+    },
+    "events": []
+  }
+}

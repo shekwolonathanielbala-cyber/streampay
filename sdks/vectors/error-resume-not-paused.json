@@ -1,0 +1,30 @@
+{
+  "schema": "streampay-vector/v1",
+  "name": "error-resume-not-paused",
+  "specFingerprint": "b0beb370c97a250f8fe97c8bbd4bd65247b35dc7145e8c41e1e0b40a826fe276",
+  "provenance": "resume_stream on a stream that is not paused (contract test only_the_sender_pauses_and_double_transitions_are_rejected): InvalidPauseTransition.",
+  "transactionEnvelopeXdr": "AAAAAgAAAADqSmxj4pxSCr71UHsTLsX5lUd2rr6+e5JCHuppFEbSLAABhqAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAGAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAANcmVzdW1lX3N0cmVhbQAAAAAAAAIAAAASAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABQAAAAAAAAABAAAAAAAAAAAAAAABFEbSLAAAAEBiKSzJti3jpFevb5vYLjkVO7klFzSaSre4cTvuzUsC25HtuJu/US080zSqdrS6lJGsz/G7Woist0e4n6dD4f0I",
+  "resultXdr": "AAAAAgAAAAAAAABj",
+  "eventsXdr": [],
+  "expected": {
+    "transaction": {
+      "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4",
+      "function": "resume_stream",
+      "args": {
+        "caller": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+        "stream_id": "1"
+      },
+      "source": "GDVEU3DD4KOFECV66VIHWEZOYX4ZKR3WV27L464SIIPOU2IUI3JCZA57",
+      "fee": "100000",
+      "sequence": "1",
+      "signatures": 1
+    },
+    "result": {
+      "error": {
+        "name": "InvalidPauseTransition",
+        "code": 99
+      }
+    },
+    "events": []
+  }
+}

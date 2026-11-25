@@ -1,0 +1,40 @@
+{
+  "schema": "streampay-vector/v1",
+  "name": "resume-stream",
+  "specFingerprint": "b0beb370c97a250f8fe97c8bbd4bd65247b35dc7145e8c41e1e0b40a826fe276",
+  "provenance": "Rebuilt from the stored Stream 1 of contracts/streaming-payments/test_snapshots/test/create_stream_accepts_exact_capacity_boundary.1.json (no snapshot records a pause event); pause at 400, resume at 700 on a 0..1000 stream; StreamResumed { new_end_time } with the window shifted by the 300 paused seconds.",
+  "transactionEnvelopeXdr": "AAAAAgAAAADqSmxj4pxSCr71UHsTLsX5lUd2rr6+e5JCHuppFEbSLAABhqAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAGAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAANcmVzdW1lX3N0cmVhbQAAAAAAAAIAAAASAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABQAAAAAAAAABAAAAAAAAAAAAAAABFEbSLAAAAEBiKSzJti3jpFevb5vYLjkVO7klFzSaSre4cTvuzUsC25HtuJu/US080zSqdrS6lJGsz/G7Woist0e4n6dD4f0I",
+  "resultXdr": "AAAAAQ==",
+  "eventsXdr": [
+    "AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAAgAAAA8AAAAOc3RyZWFtX3Jlc3VtZWQAAAAAAAUAAAAAAAAAAQAAABEAAAABAAAAAQAAAA8AAAAMbmV3X2VuZF90aW1lAAAABQAAAAAAAAUU"
+  ],
+  "expected": {
+    "transaction": {
+      "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4",
+      "function": "resume_stream",
+      "args": {
+        "caller": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+        "stream_id": "1"
+      },
+      "source": "GDVEU3DD4KOFECV66VIHWEZOYX4ZKR3WV27L464SIIPOU2IUI3JCZA57",
+      "fee": "100000",
+      "sequence": "1",
+      "signatures": 1
+    },
+    "result": {
+      "ok": null
+    },
+    "events": [
+      {
+        "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4",
+        "name": "StreamResumed",
+        "topics": {
+          "stream_id": "1"
+        },
+        "data": {
+          "new_end_time": "1300"
+        }
+      }
+    ]
+  }
+}
